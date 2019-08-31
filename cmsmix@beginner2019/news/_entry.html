@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+	@include("/include/head/meta.html")
+	@include("/include/head/link.html")
+	@include("/include/head/js.html")
+	<style>
+		.main-inner h2:not([class]) {
+			margin-top: 3em;
+			padding-bottom: .25em;
+			border-bottom: 2px solid #333;
+		}
+		.main-inner h2:not([class]):first-child {
+			margin-top: 0;
+		}
+		.main-inner table:not([class]) {
+			border-top: 1px solid #999;
+			border-left: 1px solid #999;
+		}
+		.main-inner table:not([class]) th,
+		.main-inner table:not([class]) td {
+			padding: 10px;
+			border-bottom: 1px solid #999;
+			border-right: 1px solid #999;
+		}
+	</style>
+</head>
+<body>
+<!-- ヘッダー -->
+@include("/include/header.html")
+
+<!-- ページタイトル -->
+@include("/include/header/page-title.html")
+
+<!-- トピックパス -->
+@include("/include/header/topicpath.html")
+
+<div class="acms-container js-pretty-scroll-container">
+	<!-- ※管理用パーツ -->
+	@include("/admin/action.html")
+
+		<main class="main">
+			<div class="main-inner" style="max-width: 1000px; margin: 0 auto;">
+
+				<!-- BEGIN_MODULE Touch_NotEdit -->
+				<div style="padding: 60px 0; font-size: 1.125em;">
+
+					<h2>最低限のタグのみ使用できるリッチテキストエディタ</h2>
+
+					<p><strong>js-lite-editor-field</strong></p>
+
+					<p>改行・太字・リンクのみが使用できる、シンプルなリッチテキストエディタを提供します。<br>
+					Lite EditorプラグインはGitHubで公開されており、他のウェブサイト・CMSでも自由に利用できます。</p>
+
+					<p><a href="https://appleple.github.io/lite-editor/">https://appleple.github.io/lite-editor/</a></p>
+
+					<p>2019年8月時点では、公式ドキュメントには実装方法が記載されていません。</p>
+
+					<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/admin/entry/field/news.html</p>
+
+					<p>編集画面の「Lite Editorテスト」というフィールドに、Lite Editorを実装しましょう。<br>
+					入力内容はこの下に表示されます。</p>
+
+					<!-- BEGIN_MODULE Entry_Field ctx="eid/%{EID}" -->
+					<div style="border: 1px dotted red; padding: 15px;">
+					{entry_lite_editor}[raw]
+					</div>
+					<!-- END_MODULE Entry_Field -->
+
+
+					<h2>文字数をカウントする</h2>
+
+					<p><strong>js-countup</strong></p>
+
+					<p>a-blog cmsの公式テーマの「SEO設定」のカスタムフィールドでは、入力した文字数が表示されます。<br>
+					ハンズオン用のこのテーマでは停止しています。再度使用できるようにしてみましょう。</p>
+
+					<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/admin/entry/field/seo.html</p>
+
+
+
+
+					<h2>表を簡単に入力できるカスタムフィールドを作る</h2>
+
+					<p><strong>js-editable-table</strong></p>
+
+					<p>テーブルユニットのユーザーインターフェースを、カスタムフィールドでも使用できます。<br>
+					実装方法は下記に詳しい解説があります。サンプルコードをそのままコピー・ペーストで大丈夫です。</p>
+
+					<p><a href="https://developer.a-blogcms.jp/document/customfield/table-field.html">https://developer.a-blogcms.jp/document/customfield/table-field.html</a></p>
+
+					<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/admin/entry/field/news.html</p>
+
+					<p>↓↓ここに表を表示してみましょう</p>
+
+					<!-- BEGIN_MODULE Entry_Field ctx="eid/%{EID}" -->
+					<div style="border: 1px dotted red; padding: 15px;">
+					{table}[raw]
+					</div>
+					<!-- END_MODULE Entry_Field -->
+
+
+				</div>
+				<!-- END_MODULE Touch_NotEdit -->
+
+
+
+
+				<!-- エントリーボディ -->
+				@include("/include/entry/body.html")
+
+				<!-- 確認用テンプレート -->
+				@include("/include/check-seo.html")
+			</div>
+		</main>
+
+</div>
+
+<!-- フッター -->
+@include("/include/footer.html")
+</body>
+</html>

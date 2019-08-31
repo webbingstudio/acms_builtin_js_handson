@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+	@include("/include/head/meta.html")
+	@include("/include/head/link.html")
+	@include("/include/head/js.html")
+	<style>
+		.main-inner h2 {
+			margin-top: 3em;
+			padding-bottom: .25em;
+			border-bottom: 2px solid #333;
+		}
+	</style>
+</head>
+<body>
+<!-- ヘッダー -->
+@include("/include/header.html")
+
+<div class="acms-container js-pretty-scroll-container">
+	<!-- ※管理用パーツ -->
+	@include("/admin/action.html")
+
+	<main>
+		<div class="main-inner" style="font-size: 1.25em; max-width: 1000px; margin: 0 auto; padding: 60px 0;">
+
+			<p style="text-align: center;">a-blog cmsの組み込みJSを、ハンズオン形式で試してみましょう。<br>
+			組み込みJSは、インストールするだけでいつでも使用できます。</p>
+
+			<p style="text-align: center;"><a href="https://developer.a-blogcms.jp/document/reference/builtinjs/">組み込みJS | a-blog cmsドキュメント</a></p>
+
+			<h2>指定した管理画面URLをポップアップで表示</h2>
+
+			<p><strong>js-dialog-btn</strong></p>
+
+			<p>ロゴの下にある編集ボタンをかっこよくします</p>
+
+			<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/include/header.html</p>
+
+			<h2>スムーズスクロール</h2>
+
+			<p><strong>scrollTo</strong></p>
+
+			<p>このページをいちばん下までスクロールしてください</p>
+
+			<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/include/footer.html</p>
+
+			<h2>コンテンツの折りたたみ</h2>
+
+			<p><strong>toggle-head / toggle-body</strong><br>
+			簡単、スライド表示、複数箇所に使用できない</p>
+
+			<p><strong>fade-head / fade-body</strong><br>
+			簡単、フェード表示、複数箇所に使用できない</p>
+
+			<p><strong>js-fader</strong><br>
+			フェード表示、複数箇所に使用できる、要素同士が離れていてもOK</p>
+
+			<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/include/cmsmix_toggle.html</p>
+
+			@include("/include/cmsmix_toggle.html")
+
+
+			<h2>動画のポップアップ</h2>
+
+			<p><strong>js-modal-video</strong></p>
+
+			<p>youtubeやvimeo の組み込みビデオを、ボタンなどを押した時にモーダルで再生します。<br>
+			Modal VideoプラグインはGitHubで公開されており、他のウェブサイト・CMSでも自由に利用できます。
+			<a href="https://appleple.github.io/modal-video/">https://appleple.github.io/modal-video/</a></p>
+
+			<p>※YouTubeのポリシーが変更となり、自動再生ができなくなりました（オプションのautoplayはデフォルトで1になっていますが、再生されません）。</p>
+
+			<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/include/cmsmix_video.html</p>
+
+			@include("/include/cmsmix_video.html")
+
+
+			<h2>最低限のタグのみ使用できるリッチテキストエディタ<br>
+			カスタムフィールドの文字数をカウントする</h2>
+
+			<p>「お知らせ」のエントリー詳細ページへ移動してください。</p>
+			<p><a href="%{HOME_URL}news/">%{HOME_URL}news/</a></p>
+
+
+			<h2>組み込みJSの設定を変更する</h2>
+
+			<p>各ライブラリの引数は変更することができます。ライブラリのトリガーとなるクラス名を変更したり、ユーザーインターフェースの一部を非表示にすることができます。<br>
+			下記ファイルの行頭の「//」を削除すると設定が変更されます。</p>
+
+			<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/js/config_ex.js</p>
+
+			<p>コンフィグの基本値は下記ファイルに記載されています。</p>
+
+			<p><a href="%{HOME_URL}js/config.js">%{HOME_URL}js/config.js</a></p>
+
+
+			<p style="text-align: center;"><a href="%{HOME_URL}media/001/201902/06bf800d9c7a669780c7919ca2c59b81.png" data-rel="SmartPhoto" data-caption="smartPhotoでポップアップ"><img src="%{HOME_URL}media/001/201902/tiny-06bf800d9c7a669780c7919ca2c59b81.png" alt=""></a></p>	
+
+
+
+		</div>
+
+		<div id="anchor01" class="main-inner" style="min-height: 2000px; margin: 0 auto;">
+			<p style="margin: 0 0 2em; padding: 5px; background-color: #ffe6f0; text-align: center; font-size: 1.25em">#anchor01へようこそ</p>
+		</div>
+
+		<div id="anchor02" class="main-inner" style="min-height: 2000px; margin: 0 auto;">
+			<p style="margin: 0 0 2em; padding: 5px; background-color: #ffe6f0; text-align: center; font-size: 1.25em">#anchor02へようこそ</p>
+		</div>
+
+	</main>
+
+</div>
+
+<!-- フッター -->
+@include("/include/footer.html")
+</body>
+</html>
+
+
