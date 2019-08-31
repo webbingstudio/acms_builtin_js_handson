@@ -98,12 +98,16 @@
 			Modal VideoプラグインはGitHubで公開されており、他のウェブサイト・CMSでも自由に利用できます。
 			<a href="https://appleple.github.io/modal-video/">https://appleple.github.io/modal-video/</a></p>
 
-			<p>※YouTubeのポリシーが変更となり、自動再生ができなくなりました（オプションのautoplayはデフォルトで1になっていますが、再生されません）。</p>
+			<p>※YouTubeのポリシーが変更となり、自動再生ができなくなりました（閲覧環境によっては再生されることがあります）。ミュートすれば自動再生が可能ですが、Modal Videoプラグインはオプションにミュートがありません。自動再生させいたい場合は、他のライブラリの利用をお勧めします。</p>
 
 			<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/include/cmsmix_video.html</p>
 
 			@include("/include/cmsmix_video.html")
 
+			<p>YouTubeへのリンクが貼られているa要素に「class=&quot;js-modal-video&quot;」を追加してください。<br>
+			さらにa要素に「data-video-id=&quot;QgezHNni2ZU&quot;」を追加してください。data-video-id属性の値は、YouTube動画のIDが入ります。</p>
+
+			<p>ここではa要素にクリックイベントを追加していますが、クリック可能な要素であれば何にでも追加できます。</p>
 
 			<h2>最低限のタグのみ使用できるリッチテキストエディタ<br>
 			カスタムフィールドの文字数をカウントする</h2>
