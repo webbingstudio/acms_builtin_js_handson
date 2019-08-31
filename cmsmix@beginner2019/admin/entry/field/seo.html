@@ -1,5 +1,5 @@
 <div class="acms-admin-accordion">
-	<h3 class="acms-admin-accordion-title"><a href="#fadeSeoInfo" class="js-fader acms-admin-accordion-title-link">SEO設定<span class="acms-admin-icon-arrow-small-down"></span></a></h3>
+	<h3 class="acms-admin-accordion-title"><a href="#fadeSeoInfo" class="acms-admin-accordion-title-link">SEO設定<span class="acms-admin-icon-arrow-small-down"></span></a></h3>
 	<div id="fadeSeoInfo" class="acms-admin-accordion-inner">
 		<table class="entryFormTable acms-admin-table-entry">
 			<tr>
@@ -10,11 +10,10 @@
 				</th>
 				<td>
 
-					<p class="acms-text-danger" style="margin: 0 0 .5em;">input要素に以下を追加してください。<br>
-					class属性（既存に追加）: js-countup<br>
-					data-max="9999" data-label-target=".keyword_countup"</p>
 
 					<input type="text" name="entry_meta_title" value="{entry_meta_title}" class="acms-admin-form-width-medium" id="input-text-entry_meta_title" /> | %{ROOT_BLOG_NAME}
+
+
 					<input type="hidden" name="field[]" value="entry_meta_title" />
 					<input type="hidden" name="entry_meta_title:search" value="0" />
 				</td>
@@ -35,12 +34,10 @@
 				</th>
 				<td>
 
-					<p class="acms-text-danger" style="margin: 0 0 .5em;">textarea要素に以下を追加してください。<br>
-					class属性（既存に追加）: js-countup<br>
-					data-max="9999" data-label-target=".description_countup"</p>
-
 
 					<textarea name="entry_meta_description" rows="5" id="input-text-entry_meta_description" class="acms-admin-form-width-full">{entry_meta_description}</textarea>
+
+
 					<input type="hidden" name="field[]" value="entry_meta_description" />
 					<input type="hidden" name="entry_meta_description:search" value="0" />
 				</td>
