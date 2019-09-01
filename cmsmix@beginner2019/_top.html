@@ -44,7 +44,7 @@
 
 			<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/include/header.html</p>
 
-			<p class="acms-admin-text-success">既存の編集ボタンを削除し、テンプレートのコメントアウトを外してください</p>
+			<p>既存の編集ボタンを削除し、テンプレートのコメントアウトを外してください。</p>
 
 			<h2>スムーズスクロール</h2>
 
@@ -122,17 +122,30 @@
 			<h2>組み込みJSの設定を変更する</h2>
 
 			<p>各ライブラリの引数は変更することができます。ライブラリのトリガーとなるクラス名を変更したり、ユーザーインターフェースの一部を非表示にすることができます。<br>
-			下記ファイルの行頭の「//」を削除すると設定が変更されます。</p>
+			詳しい解説はこちらです。</p>
 
-			<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/js/config_ex.js</p>
+			<p><a href="https://developer.a-blogcms.jp/document/javascript/#entry-id-1397">組み込みJSについて | JavaScript | a-blog cmsドキュメント</a></p>
 
-			<p>コンフィグの基本値は下記ファイルに記載されています。</p>
+			<p>コンフィグの基本値はCMS内の、下記ファイルに記載されています。</p>
 
 			<p><a href="%{HOME_URL}js/config.js">%{HOME_URL}js/config.js</a></p>
 
+			<p>新規JavaScriptファイルを作成し、変数を記載してテーマ内に読み込むことで、設定を変更します。<br>
+			このハンズオン用テーマでは、あらかじめ「config_ex.js」ファイルを読み込んであるので、こちらを編集してみましょう。</p>
+
+			<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/js/config_ex.js</p>
+
+			<p>下の画像をクリックして、ポップアップの下に複数画像用のサムネイルが表示されることを確認してください。</p>
+
+			<p>「config_ex.js」ファイルの4行目〜13行目は、「//」でコメントアウトされています。すべて削除して更新してください。</p>
+
+			<p>下の画像をふたたびクリックして、複数画像用のサムネイルがなくなっていることを確認してください。</p>
+
+			<p>「動画のポップアップ」の画像をふたたびクリックして、縦横比が正方形に近くなっていることや、時間のコントロールバーがなくなっていることを確認してください。</p>
 
 			<p style="text-align: center;"><a href="%{HOME_URL}media/001/201902/06bf800d9c7a669780c7919ca2c59b81.png" data-rel="SmartPhoto" data-caption="smartPhotoでポップアップ"><img src="%{HOME_URL}media/001/201902/tiny-06bf800d9c7a669780c7919ca2c59b81.png" alt=""></a></p>	
 
+			<p class="acms-text-center acms-text-danger" style="margin-top: 90px; margin-bottom: 300px;">ハンズオンは以上です。お疲れさまでした！</p>
 
 
 		</div>
