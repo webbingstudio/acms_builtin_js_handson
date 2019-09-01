@@ -16,15 +16,26 @@
 		.main-inner h2:not([class]):first-child {
 			margin-top: 0;
 		}
-		.main-inner table:not([class]) {
+		.main-inner .scroll-hint {
+			max-width: 100%;
+			overflow: hidden;
+		}
+		.main-inner table:not([class]),
+		.main-inner table.js-table-unit-scroll-hint {
 			border-top: 1px solid #999;
 			border-left: 1px solid #999;
 		}
 		.main-inner table:not([class]) th,
-		.main-inner table:not([class]) td {
+		.main-inner table:not([class]) td,
+		.main-inner table.js-table-unit-scroll-hint th,
+		.main-inner table.js-table-unit-scroll-hint td {
 			padding: 10px;
 			border-bottom: 1px solid #999;
 			border-right: 1px solid #999;
+		}
+		.main-inner table.js-table-unit-scroll-hint th,
+		.main-inner table.js-table-unit-scroll-hint td {
+			white-space: nowrap;
 		}
 	</style>
 </head>
@@ -102,11 +113,19 @@
 					<p><strong>js-editable-table</strong></p>
 
 					<p>テーブルユニットのユーザーインターフェースを、カスタムフィールドでも使用できます。<br>
-					実装方法は下記に詳しい解説があります。サンプルコードをそのままコピー・ペーストで大丈夫です。</p>
+					実装方法の詳しい解説は、下記URLを参照ください。</p>
 
 					<p><a href="https://developer.a-blogcms.jp/document/customfield/table-field.html">https://developer.a-blogcms.jp/document/customfield/table-field.html</a></p>
 
 					<p class="acms-admin-text-success">/themes/cmsmix@beginner2019/admin/entry/field/news.html</p>
+
+					<p>ページを一番下までスクロールすると「変更」ボタンがあります。クリックしてエントリー編集画面へ移動してください。</p>
+
+					<p>「テーブル編集テスト」の入力フォームがコメントアウトされています。コメントを外してください。</p>
+
+					<p>※入力フォームの「ELSE」〜「END_IF」間が、何も入力していなかったときに挿入される初期コードです。初期コードは必須です。</p>
+
+					<p>編集画面にテーブル編集画面が表示されること、編集できることを確認してください。</p>
 
 					<p>↓↓ここに表を表示してみましょう</p>
 
@@ -115,6 +134,19 @@
 					{table}[raw]
 					</div>
 					<!-- END_MODULE Entry_Field -->
+
+
+					<h2>横スクロールを促すテーブル</h2>
+
+					<p><strong>scroll-hint</strong></p>
+
+					<p>先ほど作成したテーブルのいずれかのセルに、ウィンドウ幅をはみ出すくらいの文章を改行せずに入力してください。</p>
+
+					<p>編集画面の右上に「テーブル」オプションがあります。「スクロールを促すテーブル」を選択して、エントリーを更新してください。</p>
+
+					<p>上の表にスクロールを促すアイコンが表示されることを確認してください。</p>
+
+					<p class="acms-admin-text-center acms-admin-text-danger" style="margin-top: 60px;">ここまで完了したら、サイトのトップページへ戻って<br>「組み込みJSの設定を変更する」へ進んでください。</p>
 
 
 				</div>

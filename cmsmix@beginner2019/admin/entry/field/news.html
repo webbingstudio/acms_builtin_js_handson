@@ -15,9 +15,30 @@
     <td>
 
 
+<!-- BEGIN_MODULE Sample:veil -->
 
+<div class="js-editable-table-field" style="background-color:#eee;padding:10px;">
+  <div class="js-editable-table">
+    <!-- BEGIN_IF [{table}[delnl]/nem] -->
+    {table}[raw]
+    <!-- ELSE -->
+    <table>
+      <tr>
+        <th>サンプル</th>
+        <th>サンプル</th>
+    </tr>
+      <tr>
+        <td>サンプル</td>
+        <td>サンプル</td>
+      </tr>
+    </table>
+    <!-- END_IF -->
+    <input type="hidden" class="js-editable-table-dest" value="{table}" name="table">
+    <input type="hidden" name="field[]" value="table">
+  </div>
+</div>
 
-
+<!-- END_MODULE Sample:veil -->
 
 
 
